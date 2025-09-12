@@ -11,7 +11,7 @@ passwordSchema
   .has().lowercase()                                // Must have lowercase letters
   .has().digits()                                   // Must have digits
   .has().not().spaces()                             // Should not have spaces
-  .is().not().oneOf(['Passw0rd', 'Password123']);   // Blacklist these common passwords
+  .is().not().oneOf(['Passw0rd', 'Password123']);
 
 // Middleware function to validate passwords
 const validatePassword = (req, res, next) => {
